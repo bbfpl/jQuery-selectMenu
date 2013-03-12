@@ -1,0 +1,43 @@
+<!doctype html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html  lang="zh"><!--<![endif]-->
+	<head>
+		<title>jquery下拉菜单</title> 
+		<link rel="stylesheet" type="text/css" href="css/selectMenu.css" />
+		<style>
+		.show{margin:0 auto;width:1100px;margin-top:40px;}
+		#select1{float:left;margin-right:20px;}
+		#but{background: none repeat scroll 0 0 #8AA8BD;border: medium none;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;border-radius: 5px;color: #FFFFFF;cursor: pointer;padding: 10px;}
+		</style>
+
+	</head>
+	<body>  
+	<div class="show"> 
+	<!--下拉菜单 样式1-->
+	<div id="select1">
+		<span>请选择</span>
+		<ul>
+			<li><a href="#">电影<i class="icon-facetime-video"></i></a></li>
+			<li><a href="#">音乐<i class="icon-music"></i></a></li>
+			<li><a href="#">图片<i class="icon-picture"></i></a></li>
+			<li><a href="#">关机<i class="icon-off"></i></a></li>
+		</ul>
+	</div>
+	<!--下拉菜单 END-->
+ 
+	<input id="but" type="button" value="提交"/>
+	</div>
+		<script src="../jquery-1.9.1.js"></script>
+		<script src="js/jquery.selectMenu.js"></script>
+		<script>
+		$(function(){ 
+			$('#select1').selectMenu(); 
+		}); 
+		$('#but').click(function(){ 
+			var s1=$('#select1 > span').text(); 
+			alert(s1);
+		});
+		</script>
+	</body>
+</html>
